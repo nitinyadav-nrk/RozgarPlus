@@ -8,6 +8,7 @@ import { Link, useLocation } from "wouter";
 import { useLogin } from "@/api-client";
 import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
+import { getBackendErrorDescription } from "@/lib/api";
 import { LogIn } from "lucide-react";
 
 const loginSchema = z.object({
@@ -36,7 +37,7 @@ export default function Login() {
       onError: (err: any) => {
         toast({ 
           title: "Login failed", 
-          description: err.message || "Invalid credentials", 
+          description: getBackendErrorDescription(err) || "Invalid credentials", 
           variant: "destructive" 
         });
       }

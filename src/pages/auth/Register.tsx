@@ -8,6 +8,7 @@ import { Link, useLocation } from "wouter";
 import { useRegister } from "@/api-client";
 import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
+import { getBackendErrorDescription } from "@/lib/api";
 import { UserPlus } from "lucide-react";
 
 const registerSchema = z.object({
@@ -38,7 +39,7 @@ export default function Register() {
       onError: (err: any) => {
         toast({ 
           title: "Registration failed", 
-          description: err.message || "Please check your details", 
+          description: getBackendErrorDescription(err) || "Please check your details", 
           variant: "destructive" 
         });
       }

@@ -16,6 +16,14 @@ DATABASE_URL=postgresql://user:password@host:5432/database
 SESSION_SECRET=change-this-secret
 ```
 
+For Cloudflare Pages, set the same frontend variable in your deployment settings:
+
+```bash
+VITE_API_BASE_URL=https://<your-render-backend>.onrender.com
+```
+
+The frontend must be built with `VITE_API_BASE_URL` set so it can call the Render backend correctly.
+
 ## Supabase Database
 
 Run `supabase-jobnest-complete.sql` in the Supabase SQL Editor.
