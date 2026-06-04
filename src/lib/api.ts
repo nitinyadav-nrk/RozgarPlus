@@ -1,4 +1,4 @@
-export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL?.replace(/\/+$, "") || null;
+export const apiBaseUrl = import.meta.env.VITE_API_BASE_URL?.replace(/\/+$/, "") || null;
 
 export function getApiBaseUrl(): string | null {
   if (!apiBaseUrl) {
