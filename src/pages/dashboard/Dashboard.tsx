@@ -3,7 +3,7 @@ import { useGetUserDashboardStats, getGetUserDashboardStatsQueryKey, useGetMySub
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Clock, CheckCircle2, XCircle, Bookmark, Crown } from "lucide-react";
+import { Briefcase, Clock, CheckCircle2, Bookmark, Crown, FileText } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Dashboard() {
@@ -100,6 +100,13 @@ export default function Dashboard() {
                   ) : subscription?.status === "pending" ? (
                     <Badge className="absolute top-4 right-4 bg-amber-100 text-amber-800 border-none text-xs">Pending</Badge>
                   ) : null}
+                </div>
+              </Link>
+              <Link href="/dashboard/resume-builder">
+                <div className="p-6 border rounded-xl hover:border-primary/50 hover:bg-muted/50 transition-colors cursor-pointer">
+                  <FileText className="h-8 w-8 mb-4 text-primary" />
+                  <h3 className="font-semibold text-lg mb-1">Resume Builder</h3>
+                  <p className="text-sm text-muted-foreground">Save basic details and company experience</p>
                 </div>
               </Link>
               <Link href="/jobs">

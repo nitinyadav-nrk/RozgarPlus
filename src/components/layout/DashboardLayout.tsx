@@ -6,7 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import {
   LayoutDashboard, Briefcase, Bookmark, User, Crown,
-  LogOut, Menu, X, ChevronRight,
+  FileText, LogOut, Menu, X, ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/shared/Logo";
@@ -15,6 +15,7 @@ const navItems = [
   { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
   { href: "/dashboard/applications", label: "My Applications", icon: Briefcase },
   { href: "/dashboard/saved-jobs", label: "Saved Jobs", icon: Bookmark },
+  { href: "/dashboard/resume-builder", label: "Resume Builder", icon: FileText },
   { href: "/dashboard/subscription", label: "Subscription", icon: Crown },
   { href: "/dashboard/profile", label: "Profile", icon: User },
 ];

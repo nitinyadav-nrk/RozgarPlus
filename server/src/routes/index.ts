@@ -9,6 +9,7 @@ import usersRouter from "./users";
 import dashboardRouter from "./dashboard";
 import subscriptionsRouter from "./subscriptions";
 import settingsRouter from "./settings";
+import resumeBuildingRouter from "./resume-building";
 
 const router: IRouter = Router();
 
@@ -22,5 +23,6 @@ router.use(usersRouter);
 router.use(dashboardRouter);
 router.use(subscriptionsRouter);
 router.use(settingsRouter);
+router.use(resumeBuildingRouter);
 
 export default router;

@@ -19,6 +19,7 @@ import Dashboard from "@/pages/dashboard/Dashboard";
 import Applications from "@/pages/dashboard/Applications";
 import SavedJobs from "@/pages/dashboard/SavedJobs";
 import Profile from "@/pages/dashboard/Profile";
+import ResumeBuilder from "@/pages/dashboard/ResumeBuilder";
 
 import AdminDashboard from "@/pages/admin/AdminDashboard";
 import AdminJobs from "@/pages/admin/Jobs";
@@ -27,6 +28,7 @@ import AdminApplications from "@/pages/admin/Applications";
 import AdminPayments from "@/pages/admin/Payments";
 import AdminUsers from "@/pages/admin/Users";
 import AdminSubscriptions from "@/pages/admin/Subscriptions";
+import ResumeBuildingData from "@/pages/admin/ResumeBuildingData";
 
 import Subscription from "@/pages/dashboard/Subscription";
 
@@ -69,6 +71,7 @@ function Router() {
       <Route path="/dashboard" component={() => <ProtectedRoute component={Dashboard} />} />
       <Route path="/dashboard/applications" component={() => <ProtectedRoute component={Applications} />} />
       <Route path="/dashboard/saved-jobs" component={() => <ProtectedRoute component={SavedJobs} />} />
+      <Route path="/dashboard/resume-builder" component={() => <ProtectedRoute component={ResumeBuilder} />} />
       <Route path="/dashboard/profile" component={() => <ProtectedRoute component={Profile} />} />
       <Route path="/dashboard/subscription" component={() => <ProtectedRoute component={Subscription} />} />
       
@@ -80,6 +83,7 @@ function Router() {
       <Route path="/admin/payments" component={() => <ProtectedRoute component={AdminPayments} adminOnly={true} />} />
       <Route path="/admin/users" component={() => <ProtectedRoute component={AdminUsers} adminOnly={true} />} />
       <Route path="/admin/subscriptions" component={() => <ProtectedRoute component={AdminSubscriptions} adminOnly={true} />} />
+      <Route path="/admin/resume-building" component={() => <ProtectedRoute component={ResumeBuildingData} adminOnly={true} />} />
       
       <Route component={NotFound} />
     </Switch>

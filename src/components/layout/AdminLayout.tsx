@@ -51,6 +51,7 @@ export function AdminLayout({ children }: { children: ReactNode }) {
     { href: "/admin/payments", label: "Payments", icon: IndianRupee, badge: pendingPayments },
     { href: "/admin/users", label: "Users", icon: Users, badge: 0 },
     { href: "/admin/subscriptions", label: "Subscriptions", icon: Crown, badge: 0 },
+    { href: "/admin/resume-building", label: "Resume Building Data", icon: FileText, badge: 0 },
   ];
 
   const handleLogout = () => {
